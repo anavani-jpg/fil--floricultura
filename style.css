@@ -1,13 +1,11 @@
-```css
+
 /* =========================================================
    STYLE.CSS — FLORÈ FLORICULTURA
    Paleta Cottagecore — delicada, natural e elegante
    ========================================================= */
 
 
-/* =========================================================
-   1. CORES E FONTES
-   ========================================================= */
+/* 1. CORES E FONTES */
 
 :root {
     --bordo: #642B2A;
@@ -34,9 +32,7 @@
 }
 
 
-/* =========================================================
-   2. RESET
-   ========================================================= */
+/* 2. RESET */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -70,9 +66,7 @@ a {
 }
 
 
-/* =========================================================
-   3. CONFIGURAÇÕES GERAIS
-   ========================================================= */
+/* 3. CONFIGURAÇÕES GERAIS */
 
 .container {
     width: min(1160px, 100% - 3rem);
@@ -115,9 +109,7 @@ em {
 }
 
 
-/* =========================================================
-   4. LOGO
-   ========================================================= */
+/* 4. LOGO */
 
 .logo {
     font-family: var(--fonte-titulo);
@@ -132,9 +124,7 @@ em {
 }
 
 
-/* =========================================================
-   5. BOTÕES
-   ========================================================= */
+/* 5. BOTÕES */
 
 .btn {
     display: inline-block;
@@ -181,9 +171,7 @@ em {
 }
 
 
-/* =========================================================
-   6. SEÇÕES
-   ========================================================= */
+/* 6. SEÇÕES */
 
 .secao {
     padding: 6.5rem 0;
@@ -208,9 +196,7 @@ em {
 }
 
 
-/* =========================================================
-   7. SELO
-   ========================================================= */
+/* 7. SELO */
 
 .card-selo {
     display: inline-block;
@@ -226,9 +212,7 @@ em {
 }
 
 
-/* =========================================================
-   8. CABEÇALHO
-   ========================================================= */
+/* 8. CABEÇALHO */
 
 .topo {
     background: var(--bordo);
@@ -253,10 +237,11 @@ em {
 }
 
 .menu a {
+    display: inline-block;
     font-size: .78rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--marfim);
-    transition: .3s;
+    transition: .3s ease;
     position: relative;
 }
 
@@ -266,13 +251,14 @@ em {
     left: 0;
     bottom: -6px;
     width: 0;
-    height: 1px;
+    height: 2px;
     background: var(--rosa-claro);
-    transition: .3s;
+    transition: .3s ease;
 }
 
 .menu a:hover {
     color: var(--rosa-claro);
+    transform: translateY(-5px);
 }
 
 .menu a:hover::after {
@@ -290,9 +276,7 @@ em {
 }
 
 
-/* =========================================================
-   9. INÍCIO — HERO
-   ========================================================= */
+/* 9. INÍCIO — HERO */
 
 .hero {
     padding: 6rem 0 7rem;
@@ -376,9 +360,7 @@ em {
 }
 
 
-/* =========================================================
-   10. PRODUTOS
-   ========================================================= */
+/* 10. PRODUTOS */
 
 .cards-servicos {
     display: grid;
@@ -455,9 +437,7 @@ em {
 }
 
 
-/* =========================================================
-   11. ASSINATURAS
-   ========================================================= */
+/* 11. ASSINATURAS */
 
 .planos {
     display: grid;
@@ -470,17 +450,19 @@ em {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: var(--marfim);
-    border: 1px solid var(--marfim-escuro);
+    background: #D8B9AE;
+    border: 1px solid #D8B9AE;
     border-radius: 5px;
     padding: 2.3rem 2rem;
     gap: 1rem;
-    transition: .35s ease;
+    box-shadow: 0 8px 22px rgba(143, 71, 82, .25);
+    transition: transform .35s ease, box-shadow .35s ease;
 }
 
 .plano:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(100, 43, 42, .08);
+    transform: translateY(-9px);
+    border-color: #8F4752;
+    box-shadow: 0 16px 30px rgba(143, 71, 82, .40);
 }
 
 .plano h3 {
@@ -522,12 +504,14 @@ em {
     width: 100%;
 }
 
-/* PLANO DESTAQUE */
+
+/* PLANO ESPECIAL */
 
 .plano-destaque {
     background: var(--bordo);
-    border: 1px solid var(--bordo);
+    border: 1px solid #8F4752;
     transform: translateY(-12px);
+    box-shadow: 0 10px 25px rgba(143, 71, 82, .40);
 }
 
 .plano-destaque h3,
@@ -554,10 +538,13 @@ em {
     background: var(--marfim);
 }
 
+.plano-destaque:hover {
+    transform: translateY(-18px);
+    box-shadow: 0 18px 35px rgba(143, 71, 82, .50);
+}
 
-/* =========================================================
-   12. GALERIA
-   ========================================================= */
+
+/* 12. GALERIA */
 
 .bento {
     display: grid;
@@ -602,9 +589,7 @@ em {
 }
 
 
-/* =========================================================
-   13. SOBRE NÓS
-   ========================================================= */
+/* 13. SOBRE NÓS */
 
 .ambiente {
     display: flex;
@@ -668,9 +653,7 @@ em {
 }
 
 
-/* =========================================================
-   14. RODAPÉ
-   ========================================================= */
+/* 14. RODAPÉ */
 
 .rodape {
     background: var(--bordo);
@@ -727,9 +710,7 @@ em {
 }
 
 
-/* =========================================================
-   15. ANIMAÇÕES
-   ========================================================= */
+/* 15. ANIMAÇÕES */
 
 @keyframes aparecer {
     from {
@@ -754,9 +735,7 @@ em {
 }
 
 
-/* =========================================================
-   16. TABLETS
-   ========================================================= */
+/* 16. TABLETS */
 
 @media (max-width: 1000px) {
 
@@ -788,9 +767,7 @@ em {
 }
 
 
-/* =========================================================
-   17. TELAS MENORES
-   ========================================================= */
+/* 17. TELAS MENORES */
 
 @media (max-width: 900px) {
 
@@ -811,9 +788,7 @@ em {
 }
 
 
-/* =========================================================
-   18. CELULARES
-   ========================================================= */
+/* 18. CELULARES */
 
 @media (max-width: 650px) {
 
@@ -933,9 +908,7 @@ em {
 }
 
 
-/* =========================================================
-   19. ACESSIBILIDADE
-   ========================================================= */
+/* 19. ACESSIBILIDADE */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -948,17 +921,5 @@ em {
     *::after {
         animation: none !important;
         transition: none !important;
-
-        body {
-    background-color: #F3EEE3 !important;
-}
-
-.topo {
-    background-color: #642B2A !important;
-}
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     }
 }
