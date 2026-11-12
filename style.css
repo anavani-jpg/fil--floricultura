@@ -1,0 +1,697 @@
+
+/* =========================================================
+   STYLE.CSS — FLORÈ FLORICULTURA
+   Paleta delicada: bege, terracota, marrom e verde-sálvia
+   Reset, cores, Flexbox, Grid e responsividade
+   ========================================================= */
+
+
+/* =========================================================
+   CORES E FONTES
+   ========================================================= */
+
+:root {
+    --preto: #49352D;
+    --grafite: #F5EDE5;
+    --cinza: #E8DAD0;
+
+    --ouro: #B27960;
+    --ouro-claro: #BC8653;
+
+    --creme: #FFF9F4;
+    --texto: #75645B;
+
+    --verde-salvia: #8C8A67;
+    --bege: #B59275;
+
+    --raio: 16px;
+
+    --fonte-titulo: 'Playfair Display', Georgia, serif;
+    --fonte-texto: 'Montserrat', system-ui, sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background: var(--grafite);
+    color: var(--texto);
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+.container {
+    width: min(1160px, 100% - 2.5rem);
+    margin-inline: auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--preto);
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(2.3rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+em {
+    color: var(--ouro);
+}
+
+.eyebrow {
+    color: var(--verde-salvia);
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--preto);
+}
+
+.logo span {
+    color: var(--ouro);
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+    padding: .85rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .9rem;
+    border: 1.5px solid var(--ouro);
+    text-align: center;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-ouro, .btn-rosa {
+    background: var(--ouro);
+    color: var(--creme);
+}
+
+.btn-ouro:hover, .btn-rosa:hover {
+    background: var(--ouro-claro);
+    border-color: var(--ouro-claro);
+}
+
+.btn-contorno {
+    color: var(--ouro);
+}
+
+.btn-contorno:hover {
+    background: var(--ouro);
+    color: var(--creme);
+}
+
+.btn-pequeno {
+    padding: .55rem 1.1rem;
+    font-size: .82rem;
+}
+
+
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
+
+.secao {
+    padding: 5.5rem 0;
+}
+
+.secao-escura {
+    background: #E8DAD0;
+}
+
+.secao-cabecalho {
+    max-width: 620px;
+    margin-bottom: 3rem;
+}
+
+.secao-cabecalho h2 {
+    margin-bottom: .8rem;
+}
+
+
+/* =========================================================
+   SELO
+   ========================================================= */
+
+.card-selo {
+    display: inline-block;
+    background: var(--verde-salvia);
+    color: var(--creme);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: .3rem .8rem;
+    border-radius: 999px;
+}
+
+
+/* =========================================================
+   FLEXBOX
+   CABEÇALHO
+   ========================================================= */
+
+.topo {
+    background: var(--creme);
+    border-bottom: 1px solid var(--cinza);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topo-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a {
+    font-size: .85rem;
+    color: var(--texto);
+    transition: color .3s;
+}
+
+.menu a:hover {
+    color: var(--ouro);
+}
+
+
+/* =========================================================
+   INÍCIO — HERO
+   ========================================================= */
+
+.hero {
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.hero-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-descricao {
+    max-width: 540px;
+    margin: 1.5rem 0;
+}
+
+.hero-botoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.hero-numeros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.hero-numeros li {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-numeros strong {
+    color: var(--ouro);
+    font-family: var(--fonte-titulo);
+    font-size: 1.7rem;
+}
+
+.hero-numeros span {
+    font-size: .8rem;
+}
+
+.hero-imagem {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--raio);
+}
+
+
+/* =========================================================
+   GRID — PRODUTOS
+   ========================================================= */
+
+.cards-servicos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.card-servico {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: var(--creme);
+    padding: 1.2rem;
+    border-radius: var(--raio);
+    border: 1px solid var(--cinza);
+    box-shadow: 0 4px 15px rgba(73, 53, 45, 0.05);
+    transition: .3s;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    border-color: var(--ouro);
+    box-shadow: 0 8px 22px rgba(73, 53, 45, 0.10);
+}
+
+.card-servico img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: var(--raio);
+    margin-bottom: 1.2rem;
+}
+
+.card-servico h3 {
+    margin-bottom: .7rem;
+}
+
+.card-servico p {
+    font-size: .9rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-numero {
+    color: var(--verde-salvia);
+    font-size: .8rem;
+    font-weight: 700;
+    margin-bottom: .8rem;
+}
+
+.card-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-top: auto;
+}
+
+.card-preco strong {
+    color: var(--ouro);
+    font-size: 1.1rem;
+}
+
+.card-destaque {
+    border: 1px solid var(--ouro);
+}
+
+
+/* =========================================================
+   GRID — PLANOS
+   ========================================================= */
+
+.planos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.plano {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #E8DAD0;
+    border: 1px solid #E1D0C3;
+    border-radius: var(--raio);
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.plano-destaque {
+    border: 1.5px solid var(--ouro);
+    background: var(--creme);
+    transform: translateY(-10px);
+}
+
+.plano-preco {
+    margin: 1rem 0;
+}
+
+.plano-preco strong {
+    color: var(--ouro);
+    font-size: 1.8rem;
+    font-family: var(--fonte-titulo);
+}
+
+.plano-lista {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 2rem;
+}
+
+.plano-lista li::before {
+    content: "✓";
+    color: var(--verde-salvia);
+    margin-right: .6rem;
+}
+
+.plano .btn {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   GRID — GALERIA
+   ========================================================= */
+
+.bento {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 230px);
+    gap: 1rem;
+}
+
+.bento-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--raio);
+    background: var(--cinza);
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.bento-item:hover img {
+    transform: scale(1.06);
+}
+
+.bento-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1rem 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: .9rem;
+    background: linear-gradient(transparent, rgba(73, 53, 45, .8));
+}
+
+.bento-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+/* =========================================================
+   SOBRE NÓS
+   ========================================================= */
+
+.ambiente {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.amb-titulo {
+    flex: 1 1 100%;
+    max-width: 700px;
+}
+
+.amb-texto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.amb-numeros {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.amb-numeros li {
+    display: flex;
+    flex-direction: column;
+}
+
+.amb-numeros strong {
+    color: var(--verde-salvia);
+    font-size: 1.7rem;
+    font-family: var(--fonte-titulo);
+}
+
+.amb-numeros span {
+    font-size: .8rem;
+}
+
+.amb-imagem {
+    flex: 1 1 100%;
+}
+
+.amb-imagem img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--raio);
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+    background: var(--preto);
+    color: var(--grafite);
+    border-top: 1px solid var(--cinza);
+    padding: 4rem 0 1.5rem;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.rodape-marca {
+    max-width: 280px;
+}
+
+.rodape-marca p {
+    margin-top: 1rem;
+    font-size: .9rem;
+}
+
+.rodape h3,
+.rodape .logo {
+    color: var(--creme);
+}
+
+.rodape-contato,
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    font-size: .85rem;
+}
+
+.rodape a:hover {
+    color: var(--ouro-claro);
+}
+
+.rodape-copy {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.15);
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    font-size: .8rem;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .cards-servicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .planos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plano-destaque {
+        transform: none;
+    }
+
+    .bento {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+    }
+
+    .bento-1 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .topo-conteudo {
+        flex-wrap: wrap;
+    }
+
+    .hero-conteudo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-imagem img {
+        height: 380px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .topo-conteudo {
+        justify-content: center;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .8rem 1rem;
+    }
+
+    .topo-conteudo > .btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-numeros {
+        gap: 1.5rem;
+    }
+
+    .hero-imagem img {
+        height: 280px;
+    }
+
+    .cards-servicos,
+    .planos {
+        grid-template-columns: 1fr;
+    }
+
+    .bento {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 160px);
+    }
+
+    .bento-1 {
+        grid-column: span 2;
+    }
+
+    .ambiente {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+    }
+}
