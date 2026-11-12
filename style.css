@@ -1,38 +1,41 @@
-
+```css
 /* =========================================================
    STYLE.CSS — FLORÈ FLORICULTURA
-   Paleta delicada: bege, terracota, marrom e verde-sálvia
-   Reset, cores, Flexbox, Grid e responsividade
+   Paleta Cottagecore — delicada, natural e elegante
    ========================================================= */
 
 
 /* =========================================================
-   CORES E FONTES
+   1. CORES E FONTES
    ========================================================= */
 
 :root {
-    --preto: #49352D;
-    --grafite: #F5EDE5;
-    --cinza: #E8DAD0;
+    --bordo: #642B2A;
+    --bordo-claro: #713642;
+    --burgundy: #8F4752;
 
-    --ouro: #B27960;
-    --ouro-claro: #BC8653;
+    --rosa: #8F4752;
+    --rosa-claro: #BEB18C;
+    --rosa-suave: #E5DCC9;
 
-    --creme: #FFF9F4;
-    --texto: #75645B;
+    --verde: #B88B52;
+    --verde-claro: #C5A16D;
 
-    --verde-salvia: #8C8A67;
-    --bege: #B59275;
+    --marfim: #F3EEE3;
+    --marfim-escuro: #DED3BD;
 
-    --raio: 16px;
+    --texto: #594447;
+    --branco: #FAF7F0;
+
+    --raio: 18px;
 
     --fonte-titulo: 'Playfair Display', Georgia, serif;
-    --fonte-texto: 'Montserrat', system-ui, sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
 }
 
 
 /* =========================================================
-   RESET
+   2. RESET
    ========================================================= */
 
 *, *::before, *::after {
@@ -47,9 +50,9 @@ html {
 
 body {
     font-family: var(--fonte-texto);
-    background: var(--grafite);
+    background: var(--marfim);
     color: var(--texto);
-    line-height: 1.65;
+    line-height: 1.8;
 }
 
 img {
@@ -68,157 +71,172 @@ a {
 
 
 /* =========================================================
-   CONFIGURAÇÕES GERAIS
+   3. CONFIGURAÇÕES GERAIS
    ========================================================= */
 
 .container {
-    width: min(1160px, 100% - 2.5rem);
+    width: min(1160px, 100% - 3rem);
     margin-inline: auto;
 }
 
 h1, h2, h3 {
     font-family: var(--fonte-titulo);
-    color: var(--preto);
-    line-height: 1.15;
+    color: var(--bordo);
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 h1 {
-    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+    letter-spacing: -.04em;
 }
 
 h2 {
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    letter-spacing: -.025em;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 em {
-    color: var(--ouro);
+    color: var(--burgundy);
+    font-weight: 600;
 }
 
 .eyebrow {
-    color: var(--verde-salvia);
-    font-size: .78rem;
+    color: var(--verde);
+    font-size: .72rem;
     font-weight: 600;
-    letter-spacing: .22em;
+    letter-spacing: .2em;
     text-transform: uppercase;
-    margin-bottom: .8rem;
+    margin-bottom: 1rem;
 }
 
 
 /* =========================================================
-   LOGO
+   4. LOGO
    ========================================================= */
 
 .logo {
     font-family: var(--fonte-titulo);
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--preto);
+    color: var(--marfim);
+    letter-spacing: .03em;
 }
 
 .logo span {
-    color: var(--ouro);
+    color: var(--rosa-claro);
 }
 
 
 /* =========================================================
-   BOTÕES
+   5. BOTÕES
    ========================================================= */
 
 .btn {
     display: inline-block;
-    padding: .85rem 1.6rem;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: .9rem;
-    border: 1.5px solid var(--ouro);
+    padding: .85rem 1.65rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: .82rem;
+    letter-spacing: .025em;
+    border: 1px solid var(--burgundy);
     text-align: center;
-    transition: .3s;
+    transition: .3s ease;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-.btn-ouro, .btn-rosa {
-    background: var(--ouro);
-    color: var(--creme);
+.btn-ouro,
+.btn-rosa {
+    background: var(--burgundy);
+    color: var(--branco);
+    border-color: var(--burgundy);
 }
 
-.btn-ouro:hover, .btn-rosa:hover {
-    background: var(--ouro-claro);
-    border-color: var(--ouro-claro);
+.btn-ouro:hover,
+.btn-rosa:hover {
+    background: var(--bordo);
+    border-color: var(--bordo);
 }
 
 .btn-contorno {
-    color: var(--ouro);
+    color: var(--burgundy);
+    background: transparent;
 }
 
 .btn-contorno:hover {
-    background: var(--ouro);
-    color: var(--creme);
+    background: var(--burgundy);
+    color: var(--branco);
 }
 
 .btn-pequeno {
-    padding: .55rem 1.1rem;
-    font-size: .82rem;
+    padding: .55rem 1rem;
+    font-size: .76rem;
 }
 
 
 /* =========================================================
-   SEÇÕES
+   6. SEÇÕES
    ========================================================= */
 
 .secao {
-    padding: 5.5rem 0;
+    padding: 6.5rem 0;
 }
 
 .secao-escura {
-    background: #E8DAD0;
+    background: #E8DFD0;
 }
 
 .secao-cabecalho {
-    max-width: 620px;
-    margin-bottom: 3rem;
+    max-width: 650px;
+    margin-bottom: 3.5rem;
 }
 
 .secao-cabecalho h2 {
-    margin-bottom: .8rem;
+    margin-bottom: 1rem;
+}
+
+.secao-cabecalho > p:last-child {
+    max-width: 530px;
+    font-size: .91rem;
 }
 
 
 /* =========================================================
-   SELO
+   7. SELO
    ========================================================= */
 
 .card-selo {
     display: inline-block;
-    background: var(--verde-salvia);
-    color: var(--creme);
-    font-size: .7rem;
-    font-weight: 700;
+    background: var(--verde);
+    color: var(--branco);
+    font-size: .65rem;
+    font-weight: 600;
     letter-spacing: .12em;
     text-transform: uppercase;
-    padding: .3rem .8rem;
-    border-radius: 999px;
+    padding: .4rem .9rem;
+    border-radius: 3px;
+    animation: flutuar 4s ease-in-out infinite;
 }
 
 
 /* =========================================================
-   FLEXBOX
-   CABEÇALHO
+   8. CABEÇALHO
    ========================================================= */
 
 .topo {
-    background: var(--creme);
-    border-bottom: 1px solid var(--cinza);
-    padding: 1rem 0;
+    background: var(--bordo);
+    padding: 1.1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 4px 20px rgba(100, 43, 42, .15);
 }
 
 .topo-conteudo {
@@ -231,43 +249,78 @@ em {
 .menu ul {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
 .menu a {
-    font-size: .85rem;
-    color: var(--texto);
-    transition: color .3s;
+    font-size: .78rem;
+    font-weight: 500;
+    color: var(--marfim);
+    transition: .3s;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: var(--rosa-claro);
+    transition: .3s;
 }
 
 .menu a:hover {
-    color: var(--ouro);
+    color: var(--rosa-claro);
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.topo .btn {
+    background: var(--rosa-claro);
+    color: var(--bordo);
+    border-color: var(--rosa-claro);
+}
+
+.topo .btn:hover {
+    background: var(--marfim);
 }
 
 
 /* =========================================================
-   INÍCIO — HERO
+   9. INÍCIO — HERO
    ========================================================= */
 
 .hero {
-    padding: 5rem 0;
+    padding: 6rem 0 7rem;
     overflow: hidden;
+    background: var(--marfim);
 }
 
 .hero-conteudo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 5rem;
 }
 
 .hero-texto {
     flex: 1;
+    animation: aparecer 1s ease;
+}
+
+.hero-texto h1 {
+    max-width: 600px;
 }
 
 .hero-descricao {
-    max-width: 540px;
-    margin: 1.5rem 0;
+    max-width: 490px;
+    margin: 1.7rem 0;
+    font-size: .93rem;
+    line-height: 1.9;
 }
 
 .hero-botoes {
@@ -275,13 +328,15 @@ em {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
 .hero-numeros {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 2.7rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--marfim-escuro);
 }
 
 .hero-numeros li {
@@ -290,30 +345,39 @@ em {
 }
 
 .hero-numeros strong {
-    color: var(--ouro);
+    color: var(--burgundy);
     font-family: var(--fonte-titulo);
-    font-size: 1.7rem;
+    font-size: 1.9rem;
+    font-weight: 600;
 }
 
 .hero-numeros span {
-    font-size: .8rem;
+    font-size: .72rem;
 }
 
 .hero-imagem {
     flex: 1;
     min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: aparecer 1.3s ease;
 }
 
 .hero-imagem img {
     width: 100%;
-    height: 500px;
+    max-width: 490px;
+    aspect-ratio: 4 / 5;
+    height: auto;
     object-fit: cover;
-    border-radius: var(--raio);
+    object-position: center;
+    border-radius: 190px 190px 8px 8px;
+    box-shadow: 15px 15px 0 var(--rosa-suave);
 }
 
 
 /* =========================================================
-   GRID — PRODUTOS
+   10. PRODUTOS
    ========================================================= */
 
 .cards-servicos {
@@ -326,42 +390,43 @@ em {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: var(--creme);
-    padding: 1.2rem;
-    border-radius: var(--raio);
-    border: 1px solid var(--cinza);
-    box-shadow: 0 4px 15px rgba(73, 53, 45, 0.05);
-    transition: .3s;
+    background: var(--branco);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--marfim-escuro);
+    transition: .35s ease;
 }
 
 .card-servico:hover {
-    transform: translateY(-5px);
-    border-color: var(--ouro);
-    box-shadow: 0 8px 22px rgba(73, 53, 45, 0.10);
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(100, 43, 42, .09);
+    border-color: var(--rosa-claro);
 }
 
 .card-servico img {
     width: 100%;
     height: 230px;
     object-fit: cover;
-    border-radius: var(--raio);
+    border-radius: 3px;
     margin-bottom: 1.2rem;
 }
 
 .card-servico h3 {
-    margin-bottom: .7rem;
+    margin-bottom: .6rem;
 }
 
 .card-servico p {
-    font-size: .9rem;
+    font-size: .82rem;
+    line-height: 1.8;
     margin-bottom: 1.5rem;
 }
 
 .card-numero {
-    color: var(--verde-salvia);
-    font-size: .8rem;
-    font-weight: 700;
-    margin-bottom: .8rem;
+    color: var(--verde);
+    font-size: .73rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    margin-bottom: .7rem;
 }
 
 .card-rodape {
@@ -370,75 +435,128 @@ em {
     justify-content: space-between;
     gap: .5rem;
     margin-top: auto;
+    padding-top: .8rem;
+    border-top: 1px solid var(--marfim-escuro);
 }
 
 .card-preco strong {
-    color: var(--ouro);
+    color: var(--burgundy);
+    font-family: var(--fonte-titulo);
     font-size: 1.1rem;
 }
 
 .card-destaque {
-    border: 1px solid var(--ouro);
+    border: 1px solid var(--rosa-claro);
+}
+
+.card-destaque .card-selo {
+    align-self: flex-start;
+    margin-bottom: .7rem;
 }
 
 
 /* =========================================================
-   GRID — PLANOS
+   11. ASSINATURAS
    ========================================================= */
 
 .planos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    align-items: stretch;
 }
 
 .plano {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: #E8DAD0;
-    border: 1px solid #E1D0C3;
-    border-radius: var(--raio);
-    padding: 2rem;
+    background: var(--marfim);
+    border: 1px solid var(--marfim-escuro);
+    border-radius: 5px;
+    padding: 2.3rem 2rem;
     gap: 1rem;
+    transition: .35s ease;
 }
 
-.plano-destaque {
-    border: 1.5px solid var(--ouro);
-    background: var(--creme);
-    transform: translateY(-10px);
+.plano:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(100, 43, 42, .08);
+}
+
+.plano h3 {
+    font-size: 1.55rem;
+}
+
+.plano p {
+    color: var(--texto);
+    font-size: .85rem;
 }
 
 .plano-preco {
-    margin: 1rem 0;
+    margin: .5rem 0 1rem;
 }
 
 .plano-preco strong {
-    color: var(--ouro);
-    font-size: 1.8rem;
+    color: var(--burgundy);
+    font-size: 2rem;
     font-family: var(--fonte-titulo);
+    font-weight: 600;
 }
 
 .plano-lista {
     display: flex;
     flex-direction: column;
-    gap: .8rem;
+    gap: .9rem;
     margin-bottom: 2rem;
+    font-size: .84rem;
 }
 
 .plano-lista li::before {
-    content: "✓";
-    color: var(--verde-salvia);
-    margin-right: .6rem;
+    content: "✿";
+    color: var(--verde);
+    margin-right: .7rem;
 }
 
 .plano .btn {
     margin-top: auto;
+    width: 100%;
+}
+
+/* PLANO DESTAQUE */
+
+.plano-destaque {
+    background: var(--bordo);
+    border: 1px solid var(--bordo);
+    transform: translateY(-12px);
+}
+
+.plano-destaque h3,
+.plano-destaque p,
+.plano-destaque li {
+    color: var(--marfim);
+}
+
+.plano-destaque .plano-preco strong {
+    color: var(--rosa-claro);
+}
+
+.plano-destaque .plano-lista li::before {
+    color: var(--rosa-claro);
+}
+
+.plano-destaque .btn {
+    background: var(--rosa-claro);
+    color: var(--bordo);
+    border-color: var(--rosa-claro);
+}
+
+.plano-destaque .btn:hover {
+    background: var(--marfim);
 }
 
 
 /* =========================================================
-   GRID — GALERIA
+   12. GALERIA
    ========================================================= */
 
 .bento {
@@ -451,15 +569,15 @@ em {
 .bento-item {
     position: relative;
     overflow: hidden;
-    border-radius: var(--raio);
-    background: var(--cinza);
+    border-radius: 5px;
+    background: var(--rosa-suave);
 }
 
 .bento-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .4s;
+    transition: transform .6s ease;
 }
 
 .bento-item:hover img {
@@ -471,11 +589,11 @@ em {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 1rem 1rem;
-    color: white;
-    font-weight: 600;
-    font-size: .9rem;
-    background: linear-gradient(transparent, rgba(73, 53, 45, .8));
+    padding: 2rem 1rem 1rem;
+    color: var(--branco);
+    font-weight: 500;
+    font-size: .85rem;
+    background: linear-gradient(transparent, rgba(100, 43, 42, .8));
 }
 
 .bento-1 {
@@ -485,7 +603,7 @@ em {
 
 
 /* =========================================================
-   SOBRE NÓS
+   13. SOBRE NÓS
    ========================================================= */
 
 .ambiente {
@@ -497,12 +615,16 @@ em {
 
 .amb-titulo {
     flex: 1 1 100%;
-    max-width: 700px;
+    max-width: 720px;
+    position: relative;
+    padding-left: 1.2rem;
+    border-left: 3px solid var(--rosa);
 }
 
 .amb-texto {
     flex: 1;
     min-width: 250px;
+    font-size: .91rem;
 }
 
 .amb-numeros {
@@ -518,36 +640,42 @@ em {
 }
 
 .amb-numeros strong {
-    color: var(--verde-salvia);
-    font-size: 1.7rem;
+    color: var(--verde);
+    font-size: 1.9rem;
     font-family: var(--fonte-titulo);
 }
 
 .amb-numeros span {
-    font-size: .8rem;
+    font-size: .76rem;
 }
 
 .amb-imagem {
     flex: 1 1 100%;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .amb-imagem img {
     width: 100%;
-    height: 350px;
+    height: 370px;
     object-fit: cover;
-    border-radius: var(--raio);
+    transition: transform .5s ease;
+}
+
+.amb-imagem:hover img {
+    transform: scale(1.025);
 }
 
 
 /* =========================================================
-   RODAPÉ
+   14. RODAPÉ
    ========================================================= */
 
 .rodape {
-    background: var(--preto);
-    color: var(--grafite);
-    border-top: 1px solid var(--cinza);
-    padding: 4rem 0 1.5rem;
+    background: var(--bordo);
+    color: var(--marfim);
+    padding: 4.5rem 0 1.5rem;
 }
 
 .rodape-conteudo {
@@ -559,17 +687,17 @@ em {
 }
 
 .rodape-marca {
-    max-width: 280px;
+    max-width: 290px;
 }
 
 .rodape-marca p {
     margin-top: 1rem;
-    font-size: .9rem;
+    font-size: .84rem;
+    color: var(--marfim-escuro);
 }
 
-.rodape h3,
 .rodape .logo {
-    color: var(--creme);
+    font-size: 2.1rem;
 }
 
 .rodape-contato,
@@ -577,24 +705,57 @@ em {
     display: flex;
     flex-direction: column;
     gap: .8rem;
-    font-size: .85rem;
+    font-size: .8rem;
+    font-style: normal;
+}
+
+.rodape a {
+    transition: color .3s;
 }
 
 .rodape a:hover {
-    color: var(--ouro-claro);
+    color: var(--rosa-claro);
 }
 
 .rodape-copy {
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,.15);
-    margin-top: 3rem;
+    border-top: 1px solid rgba(243, 238, 227, .18);
+    margin-top: 3.5rem;
     padding-top: 1.5rem;
-    font-size: .8rem;
+    font-size: .73rem;
+    color: var(--marfim-escuro);
 }
 
 
 /* =========================================================
-   RESPONSIVIDADE
+   15. ANIMAÇÕES
+   ========================================================= */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+
+/* =========================================================
+   16. TABLETS
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -620,8 +781,16 @@ em {
         grid-column: span 2;
         grid-row: span 1;
     }
+
+    .menu ul {
+        gap: 1rem;
+    }
 }
 
+
+/* =========================================================
+   17. TELAS MENORES
+   ========================================================= */
 
 @media (max-width: 900px) {
 
@@ -632,18 +801,33 @@ em {
     .hero-conteudo {
         flex-direction: column;
         align-items: stretch;
+        gap: 3rem;
     }
 
     .hero-imagem img {
-        height: 380px;
+        width: 100%;
+        max-width: 500px;
     }
 }
 
 
+/* =========================================================
+   18. CELULARES
+   ========================================================= */
+
 @media (max-width: 650px) {
+
+    .container {
+        width: min(100% - 2rem, 1160px);
+    }
+
+    .topo {
+        padding: .9rem 0;
+    }
 
     .topo-conteudo {
         justify-content: center;
+        gap: 1rem;
     }
 
     .menu {
@@ -653,7 +837,11 @@ em {
     .menu ul {
         justify-content: center;
         flex-wrap: wrap;
-        gap: .8rem 1rem;
+        gap: .7rem 1rem;
+    }
+
+    .menu a {
+        font-size: .72rem;
     }
 
     .topo-conteudo > .btn {
@@ -661,20 +849,45 @@ em {
     }
 
     .hero {
-        padding: 3rem 0;
+        padding: 3.5rem 0 4rem;
+    }
+
+    .hero-conteudo {
+        gap: 2.5rem;
     }
 
     .hero-numeros {
-        gap: 1.5rem;
+        gap: 1.4rem;
+    }
+
+    .hero-numeros strong {
+        font-size: 1.5rem;
     }
 
     .hero-imagem img {
-        height: 280px;
+        width: 100%;
+        max-width: 420px;
+        aspect-ratio: 4 / 5;
+        height: auto;
+        border-radius: 130px 130px 5px 5px;
+        box-shadow: 9px 9px 0 var(--rosa-suave);
+    }
+
+    .secao {
+        padding: 4rem 0;
     }
 
     .cards-servicos,
     .planos {
         grid-template-columns: 1fr;
+    }
+
+    .card-servico img {
+        height: 260px;
+    }
+
+    .plano {
+        padding: 1.8rem;
     }
 
     .bento {
@@ -689,9 +902,63 @@ em {
     .ambiente {
         flex-direction: column;
         align-items: stretch;
+        gap: 2rem;
+    }
+
+    .amb-titulo {
+        padding-left: 1rem;
+    }
+
+    .amb-numeros {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .amb-imagem img {
+        height: 250px;
+    }
+
+    .rodape {
+        padding-top: 3.5rem;
     }
 
     .rodape-conteudo {
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    .rodape-copy {
+        margin-top: 2.5rem;
+    }
+}
+
+
+/* =========================================================
+   19. ACESSIBILIDADE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+
+        body {
+    background-color: #F3EEE3 !important;
+}
+
+.topo {
+    background-color: #642B2A !important;
+}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     }
 }
