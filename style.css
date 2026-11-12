@@ -1,29 +1,30 @@
 
 /* =========================================================
    STYLE.CSS — FLORÈ FLORICULTURA
-   Paleta Cottagecore — delicada, natural e elegante
-   ========================================================= */
+   Paleta quente — Caramelo, Canela e Terracota
+   Delicada, acolhedora e elegante
+========================================================= */
 
 
 /* 1. CORES E FONTES */
 
 :root {
-    --bordo: #642B2A;
-    --bordo-claro: #713642;
-    --burgundy: #8F4752;
+    --bordo: #694438;
+    --bordo-claro: #805744;
+    --burgundy: #A65F4D;
 
-    --rosa: #8F4752;
-    --rosa-claro: #BEB18C;
-    --rosa-suave: #E5DCC9;
+    --rosa: #C77F68;
+    --rosa-claro: #D9B994;
+    --rosa-suave: #EBD7C2;
 
-    --verde: #B88B52;
-    --verde-claro: #C5A16D;
+    --verde: #B98B68;
+    --verde-claro: #786758;
 
-    --marfim: #F3EEE3;
-    --marfim-escuro: #DED3BD;
+    --marfim: #F5E9D8;
+    --marfim-escuro: #E2CDB5;
 
-    --texto: #594447;
-    --branco: #FAF7F0;
+    --texto: #594237;
+    --branco: #FFFAF3;
 
     --raio: 18px;
 
@@ -178,7 +179,7 @@ em {
 }
 
 .secao-escura {
-    background: #E8DFD0;
+    background: #EBD7C2;
 }
 
 .secao-cabecalho {
@@ -220,7 +221,7 @@ em {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(100, 43, 42, .15);
+    box-shadow: 0 4px 20px rgba(105, 68, 56, .18);
 }
 
 .topo-conteudo {
@@ -381,7 +382,7 @@ em {
 
 .card-servico:hover {
     transform: translateY(-7px);
-    box-shadow: 0 15px 30px rgba(100, 43, 42, .09);
+    box-shadow: 0 15px 30px rgba(105, 68, 56, .10);
     border-color: var(--rosa-claro);
 }
 
@@ -450,19 +451,19 @@ em {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: #D8B9AE;
-    border: 1px solid #D8B9AE;
+    background: #F5E9D3;
+    border: 1px solid #755643;
     border-radius: 5px;
     padding: 2.3rem 2rem;
     gap: 1rem;
-    box-shadow: 0 8px 22px rgba(143, 71, 82, .25);
+    box-shadow: 0 8px 22px rgba(105, 68, 56, .18);
     transition: transform .35s ease, box-shadow .35s ease;
 }
 
 .plano:hover {
     transform: translateY(-9px);
-    border-color: #8F4752;
-    box-shadow: 0 16px 30px rgba(143, 71, 82, .40);
+    border-color: var(--rosa);
+    box-shadow: 0 16px 30px rgba(105, 68, 56, .25);
 }
 
 .plano h3 {
@@ -495,7 +496,7 @@ em {
 
 .plano-lista li::before {
     content: "✿";
-    color: var(--verde);
+    color: var(--burgundy);
     margin-right: .7rem;
 }
 
@@ -509,9 +510,9 @@ em {
 
 .plano-destaque {
     background: var(--bordo);
-    border: 1px solid #8F4752;
+    border: 1px solid var(--bordo);
     transform: translateY(-12px);
-    box-shadow: 0 10px 25px rgba(143, 71, 82, .40);
+    box-shadow: 0 10px 25px rgb(24, 22, 22);
 }
 
 .plano-destaque h3,
@@ -540,7 +541,7 @@ em {
 
 .plano-destaque:hover {
     transform: translateY(-18px);
-    box-shadow: 0 18px 35px rgba(143, 71, 82, .50);
+    box-shadow: 0 18px 35px rgba(105, 68, 56, .40);
 }
 
 
@@ -580,7 +581,7 @@ em {
     color: var(--branco);
     font-weight: 500;
     font-size: .85rem;
-    background: linear-gradient(transparent, rgba(100, 43, 42, .8));
+    background: linear-gradient(transparent, rgba(105, 68, 56, .85));
 }
 
 .bento-1 {
@@ -702,7 +703,7 @@ em {
 
 .rodape-copy {
     text-align: center;
-    border-top: 1px solid rgba(243, 238, 227, .18);
+    border-top: 1px solid rgba(245, 233, 216, .18);
     margin-top: 3.5rem;
     padding-top: 1.5rem;
     font-size: .73rem;
